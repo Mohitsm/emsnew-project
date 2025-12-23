@@ -16,8 +16,11 @@ import Layout from "./components/layout/Layout";
 import Login from "./pages/auth/Login";
 
 // Super Admin Pages
-import SuperAdminDashboard from "./pages/superadmin/Dashboard";
-import UserManagement from "./pages/superadmin/UserManagement";
+import SuperAdminDashboard from "./pages/superadmin/SuperAdminDashboard";
+import CompaniesManagement from "./pages/superadmin/CompaniesManagement";
+import AdminsManagement from "./pages/superadmin/AdminsManagement";
+import SubscriptionPlans from "./pages/superadmin/SubscriptionPlans";
+import ReportsAnalytics from "./pages/superadmin/ReportsAnalytics";
 import SystemSettings from "./pages/superadmin/SystemSettings";
 
 // Admin Pages
@@ -27,7 +30,12 @@ import AdminEmployeeManagement from "./pages/admin/AdminEmployeeManagement";
 import AdminAttendanceManagement from "./pages/admin/AdminAttendanceManagement";
 import AdminLeaveManagement from "./pages/admin/AdminLeaveManagement";
 import AdminPayrollManagement from "./pages/admin/AdminPayrollManagement";
-
+import AdminShiftRosterManagement from "./pages/admin/AdminShiftRosterManagement";
+import AdminDepartmentManagement from "./pages/admin/AdminDepartmentManagement";
+import AdmimDocumentManagement from "./pages/admin/AdminDocumentManagement";
+import AdminReports from "./pages/admin/AdminReports";
+import AdminSettings from "./pages/admin/AdminSettings";
+import AdminHRAppraisal from "./pages/admin/AdminHRAppraisal";
 
 // Employee Pages
 
@@ -79,10 +87,34 @@ function App() {
                 }
               />
               <Route
-                path="/superadmin/users"
+                path="/superadmin/companies"
                 element={
                   <PrivateRoute allowedRoles={["superadmin"]}>
-                    <UserManagement />
+                    <CompaniesManagement />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/superadmin/admins"
+                element={
+                  <PrivateRoute allowedRoles={["superadmin"]}>
+                    <AdminsManagement />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/superadmin/subscriptions"
+                element={
+                  <PrivateRoute allowedRoles={["superadmin"]}>
+                    <SubscriptionPlans />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/superadmin/reports"
+                element={
+                  <PrivateRoute allowedRoles={["superadmin"]}>
+                    <ReportsAnalytics />
                   </PrivateRoute>
                 }
               />
@@ -131,7 +163,7 @@ function App() {
                   </PrivateRoute>
                 }
               />
-               // Payroll Management
+              // Payroll Management
               <Route
                 path="/admin/payroll"
                 element={
@@ -140,13 +172,12 @@ function App() {
                   </PrivateRoute>
                 }
               />
-              {/*
               // Shift Roster
               <Route
                 path="/admin/shift-roster"
                 element={
                   <PrivateRoute allowedRoles={["admin"]}>
-                    <ShiftRosterManagement />
+                    <AdminShiftRosterManagement />
                   </PrivateRoute>
                 }
               />
@@ -155,7 +186,7 @@ function App() {
                 path="/admin/departments"
                 element={
                   <PrivateRoute allowedRoles={["admin"]}>
-                    <DepartmentManagement />
+                    <AdminDepartmentManagement />
                   </PrivateRoute>
                 }
               />
@@ -164,7 +195,7 @@ function App() {
                 path="/admin/documents"
                 element={
                   <PrivateRoute allowedRoles={["admin"]}>
-                    <DocumentManagement />
+                    <AdmimDocumentManagement />
                   </PrivateRoute>
                 }
               />
@@ -173,7 +204,7 @@ function App() {
                 path="/admin/reports"
                 element={
                   <PrivateRoute allowedRoles={["admin"]}>
-                    <Reports />
+                    <AdminReports />
                   </PrivateRoute>
                 }
               />
@@ -182,7 +213,7 @@ function App() {
                 path="/admin/settings"
                 element={
                   <PrivateRoute allowedRoles={["admin"]}>
-                    <Settings />
+                    <AdminSettings />
                   </PrivateRoute>
                 }
               />
@@ -191,10 +222,10 @@ function App() {
                 path="/admin/hr-appraisal"
                 element={
                   <PrivateRoute allowedRoles={["admin"]}>
-                    <HRAppraisal />
+                    <AdminHRAppraisal />
                   </PrivateRoute>
                 }
-              /> */}
+              />
               {/* Employee Routes */}
               // Employee Protected Routes
               <Route

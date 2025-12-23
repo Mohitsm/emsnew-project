@@ -12,24 +12,28 @@ const Layout = ({ children }) => {
 
   const menuItems = {
     superadmin: [
-      { label: 'Dashboard', path: '/superadmin/dashboard', icon: '📊' },
-      { label: 'User Management', path: '/superadmin/users', icon: '👥' },
-      { label: 'System Settings', path: '/superadmin/settings', icon: '⚙️' },
-      { label: 'Reports & Logs', path: '/superadmin/reports', icon: '📈' },
-      { label: 'System Health', path: '/superadmin/health', icon: '❤️' },
+      { path: '/superadmin/dashboard', label: 'Dashboard', icon: '📊' },
+  { path: '/superadmin/companies', label: 'Companies', icon: '🏢' },
+  { path: '/superadmin/admins', label: 'Admins Management', icon: '👥' },
+  { path: '/superadmin/subscriptions', label: 'Subscription Plans', icon: '💳' },
+  { path: '/superadmin/reports', label: 'Reports & Analytics', icon: '📈' },
+  { path: '/superadmin/settings', label: 'System Settings', icon: '⚙️' }
     ],
     admin: [
-       { path: '/admin/dashboard', label: 'Dashboard', icon: <LayoutDashboard size={20} /> },
-    { path: '/admin/employees', label: 'Employee Management', icon: <Users size={20} /> },
-    { path: '/admin/attendance', label: 'Attendance Management', icon: <Clock size={20} /> },
-    { path: '/admin/leave', label: 'Leave Management', icon: <CalendarDays size={20} /> },
-    { path: '/admin/payroll', label: 'Payroll Management', icon: <CreditCard size={20} /> },
-    { path: '/admin/shift-roster', label: 'Shift Roster', icon: <FileText size={20} /> },
-    { path: '/admin/departments', label: 'Department Management', icon: <Building2 size={20} /> },
-    { path: '/admin/documents', label: 'Document Management', icon: <FolderOpen size={20} /> },
-    { path: '/admin/reports', label: 'Reports', icon: <BarChart3 size={20} /> },
-    { path: '/admin/settings', label: 'Settings', icon: <Settings size={20} /> },
-    { path: '/admin/hr-appraisal', label: 'HR Appraisal', icon: <Award size={20} /> },
+       
+  { path: '/admin/dashboard', label: 'Dashboard', icon: '📊' },
+  { path: '/admin/employees', label: 'Employee Management', icon: '👥' },
+  { path: '/admin/attendance', label: 'Attendance Management', icon: '⏱️' },
+  { path: '/admin/leave', label: 'Leave Management', icon: '📅' },
+  { path: '/admin/payroll', label: 'Payroll Management', icon: '💳' },
+  { path: '/admin/shift-roster', label: 'Shift Roster', icon: '🗂️' },
+  { path: '/admin/departments', label: 'Department Management', icon: '🏢' },
+  { path: '/admin/documents', label: 'Document Management', icon: '📁' },
+  { path: '/admin/reports', label: 'Reports', icon: '📈' },
+  { path: '/admin/settings', label: 'Settings', icon: '⚙️' },
+  { path: '/admin/hr-appraisal', label: 'HR Appraisal', icon: '🏆' },
+
+
     ],
     employee: [
       { path: '/employee/dashboard', label: 'Dashboard', icon: '📊' },
